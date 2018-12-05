@@ -1,4 +1,6 @@
+//===============================================
 // CHARTS
+//===============================================
 
 // line graph
 let lineCanvas = document.getElementById('line-graph').getContext('2d');
@@ -119,4 +121,16 @@ let doughnutChart = new Chart(doughnutCanvas, {
       },
       rotation: 6.3,
     }
+});
+
+//===============================================
+// ALERT NOTIFICATION
+//===============================================
+
+const alertBar = document.getElementById('alert-bar');
+const removeButton = document.getElementById('alert-bar').lastElementChild;
+
+removeButton.addEventListener('click', (e) => {
+  console.log('remove button has been clicked');
+  alertBar.style.display = 'none';
 });

@@ -1,0 +1,20 @@
+@keyframes bell-alert {
+  100% {
+    transform: rotate(25deg);
+  }
+}
+
+.notification-bell:hover {
+  animation: bell-alert 0.1s forwards;
+}
+
+.st0 {
+  transition: .2s;
+  stroke: #fff;
+  stroke-width:2;
+}
+
+.notification-bell:hover .st0 {
+  fill: #fff;
+}
+
