@@ -1,0 +1,16 @@
+.chart-controls {
+  align-self: right;
+  list-style: none;
+  float: right;
+  margin-top: 0px;
+}
+
+.chart-controls li {
+  display: inline-block;
+  font-size: 0.8em;
+  color: #ffffff;
+  background-color: #81C98F;
+  border-radius: 14px;
+  padding: 6px 12px;
+  margin: 0px 10px; 
+}

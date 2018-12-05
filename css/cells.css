@@ -1,0 +1,90 @@
+/* user activity cells */
+
+.cell-user-activity {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid lightgray;
+}
+
+.cell-user-activity:last-of-type {
+  border-bottom: none;
+}
+
+.cell-user-activity img {
+  height: 40px;
+  border-radius: 100%;
+  margin-left: 4px;
+  margin-right: 14px;
+}
+
+.cell-user-activity p {
+  font-size: .9em;
+  margin: 4px 0px;
+}
+
+.cell-user-activity .action {
+  margin-left: auto;
+}
+
+/* social stats cells */
+
+.cell-social-stats {
+  width: 26%;
+  background: #f8f8f8;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  padding: 12px 8px;
+  display: flex;
+  align-items: center;
+  min-height: 100px;
+}
+
+.cell-social-stats img {
+  height: 66px;
+  margin: 0px 20px;
+}
+
+.cell-social-stats h2 {
+  margin: 4px 0px;
+  font-size: 0.9em;
+  color: #7477BF;
+}
+
+.cell-social-stats h3 {
+  margin: 4px 0px;
+  font-size: 2.2em;
+  color: #3b3b3b;
+  font-weight: lighter;
+}
+
+.social-stats-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 40px 0px;
+}
+
+/* notification bar */
+
+.notification-bar {
+  background-color: #7377BF;
+  border-radius: 4px;
+  margin: 24px;
+  display: flex;
+  min-height: 44px;
+  align-items: center;
+}
+
+.notification-bar p {
+  color: #ffffff;
+  padding: 10px;
+  margin: 0px;
+  margin-left: 10px;
+}
+
+.remove-alert {
+  color: #ffffff;
+  margin-left: auto;
+  padding: 10px;
+}

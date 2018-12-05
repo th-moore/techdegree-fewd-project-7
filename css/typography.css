@@ -1,0 +1,21 @@
+#app-logo {
+  color: #ffffff;
+  margin: 0px 30px;
+}
+
+.widget-title {
+  color: #666666;
+  text-transform: uppercase;
+  font-size: 1em;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+.text-email {
+  font-size: 0.9em;
+  color: #7477BF;
+}
+
+.text-secondary {
+  font-size: 0.9em;
+}

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>  
+    <!-- page metadata -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- page title -->
+    <title>Web App Dashboard</title>
+
+    <!-- external fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+
+    <!-- 1. ABSTRACTS -->
+    <!-- variables -->
+    <!-- extends -->
+    <!-- functions -->
+    <!-- mixins -->
+
+    <!-- 2. VENDORS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/css-toggle-switch@latest/dist/toggle-switch.css" />
+
+    <!-- 3. BASE -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/typography.css">
+    
+    <!-- 4. LAYOUT -->
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/widgets.css">
+    
+    <!-- 5. COMPONENTS -->
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/cells.css">
+    <!-- images -->
+    
+    <!-- 6. PAGES -->
+
+    <!-- 7. THEMES -->
+
+    <!-- main css -->
+
+  </head>
+  
+  <body>
+    <div class="container">
+      
+      <!-- header bar container -->
+      <header>
+        <div id="app-logo">
+          <h2>YourApp</h2>
+        </div>
+        
+        <!-- notification dropdown
+        <div>
+          <ul class="header-icon">  
+            <li>
+              <img src="img/member-1.jpg" alt="Profile photo of a user">
+              <div>
+                <p>Notification title</p>
+                <p>Notification message</p>
+              </div>
+            </li>
+            <li>
+              <img src="img/member-2.jpg" alt="Profile photo of a user">
+              <div>
+                <p>Notification title</p>
+                <p>Notification message</p>
+              </div>
+            </li>
+            <li>
+              <img src="img/member-3.jpg" alt="Profile photo of a user">
+              <div>
+                <p>Notification title</p>
+                <p>Notification message</p>
+              </div>
+            </li>
+            <li>
+              <img src="img/member-4.jpg" alt="Profile photo of a user">
+              <div>
+                <p>Notification title</p>
+                <p>Notification message</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        -->
+
+        <!-- user profile -->
+        <div id="user-profile">
+          <div>
+          <img class="notification-bell" src="icons/icon-bell.svg" alt="Icon of a bell">
+          </div>
+          <img class="profile-image" src="img/member-2.jpg" alt="Profile photo of a user">
+          <p>Josh Sullivan</p>
+        </div>
+      </header>
+      
+      <!-- navigation bar container -->
+      <nav>
+        <div class="nav-icon">
+          <a href="#"><img src="icons/icon-dashboard.svg" alt="Icon of a dashboard"></a>
+        </div>
+        <div class="nav-icon">
+          <a href="#"><img src="icons/icon-visits.svg" alt="Icon of a visits"></a>
+        </div>
+        <div class="nav-icon">
+          <a href="#"><img src="icons/icon-members.svg" alt="Icon of a members"></a>
+        </div>
+        <div class="nav-icon">
+          <a href="#"><img src="icons/icon-settings.svg" alt="Icon of a settings"></a>
+        </div>
+      </nav>
+
+      <main>
+
+        <!-- dashboard header container -->
+        <div id="dashboard-header">
+          <h2>Dashboard</h2>
+          <div class="header-search">
+            <input type="text" placeholder="Search">
+          </div>
+        </div>
+
+
+        <!-- notification container -->
+        <div class="notification-container" id="notification-bar">
+          <div class="notification-bar">
+            <p><strong>Alert</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <span class="remove-alert"><strong>X</strong></span>
+          </div>
+        </div>
+
+
+        <!-- dashboard grid container -->
+        <div class="dashboard-grid">
+
+          <!-- traffic total container -->
+          <div class="widget-container" id="traffic-total">
+            <h3 class="widget-title">Total Traffic</h3>
+            <ul class="chart-controls">
+              <li>Hourly</li>
+              <li>Daily</li>
+              <li>Weekly</li>
+              <li>Monthly</li>
+            </ul>
+
+            <!-- line graph -->
+            <div class="chart-container" style="position: relative">
+              <canvas id="line-graph"></canvas>
+            </div>
+          </div>
+          
+
+          <!-- daily traffic container -->
+          <div class="widget-container" id="traffic-daily">
+            <h3 class="widget-title">Daily Traffic</h3>
+
+            <!-- bar chart -->
+            <div class="chart-container" style="position: relative">
+              <canvas id="bar-chart"></canvas>
+            </div>
+          </div>
+          
+
+          <!-- mobile users container -->
+          <div class="widget-container" id="mobile-users">
+            <h3 class="widget-title">Mobile Users</h3>
+
+            <!-- doughnut chart -->
+            <div class="chart-container" style="position: relative">
+              <canvas id="doughnut-chart"></canvas>
+            </div>
+          </div>
+          
+
+          <!-- social stats container -->
+          <div class="widget-container" id="social-stats">
+            <h3 class="widget-title">Social Stats</h3>
+
+            <!-- social stats -->
+            <div class="social-stats-container">
+              <div class="cell-social-stats">
+                <img src="icons/icon-twitter.svg">
+                <div>
+                  <h2>Twitter</h2>
+                  <h3>1,234</h3>
+                </div>
+              </div>
+              <div class="cell-social-stats">
+                <img src="icons/icon-facebook.svg">
+                <div>
+                  <h2>Facebook</h2>
+                  <h3>1,234</h3>
+                </div>
+              </div>
+              <div class="cell-social-stats">
+                <img src="icons/icon-google-plus.svg">
+                <div>
+                  <h2>Google+</h2>
+                  <h3>1,234</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+
+          <!-- new members container -->
+          <div class="widget-container" id="new-members">
+            <h3 class="widget-title">New Members</h3>
+            
+            <!-- user list -->
+            <div>
+              <div class="cell-user-activity">
+                <img src="img/member-1.jpg" alt="Profile picture of a user">
+                <div>
+                  <p>Victoria Chambers</p>
+                  <p><span class="text-email">victoria.chambers@email.com</span></p>
+                </div>
+                <p class="action">10/11/12</p>
+              </div>
+              <div class="cell-user-activity">
+                <img src="img/member-2.jpg" alt="Profile picture of a user">
+                <div>
+                  <p>Dale Byrd</p>
+                  <p><span class="text-email">dale.byrd@email.com</span></p>
+                </div>
+                <p class="action">10/11/12</p>
+              </div>
+              <div class="cell-user-activity">
+                <img src="img/member-3.jpg" alt="Profile picture of a user">
+                <div>
+                  <p>Dawn Wood</p>
+                  <p><span class="text-email">dawn.wood@email.com</span></p>
+                </div>
+                <p class="action">10/11/12</p>
+              </div>
+              <div class="cell-user-activity">
+                <img src="img/member-4.jpg" alt="Profile picture of a user">
+                <div>
+                  <p>Dan Oliver</p>
+                  <p><span class="text-email">dan.oliver@email.com</span></p>
+                </div>
+                <p class="action">10/11/12</p>
+              </div>
+            </div>
+          </div>
+          
+
+          <!-- recent activity container -->
+          <div class="widget-container" id="recent-activity">
+            <h3 class="widget-title">Recent Activity</h3>
+
+            <!-- user list -->
+            <div>
+              <div class="cell-user-activity">
+                <img src="img/member-1.jpg" alt="Profile picture of a user">
+                <div>
+                  <p>Victoria Chambers commented on YourApp's SEO Tips</p>
+                  <p><span class="text-secondary">4 hours ago</span></p>
+                </div>
+                <!-- chevron -->
+              </div>
+              <div class="cell-user-activity">
+                <img src="img/member-2.jpg" alt="Profile picture of a user">
+                <div>
+                  <p>Dale Byrd liked the post Facebook's Changes for 2016</p>
+                  <p><span class="text-secondary">5 hours ago</span></p>
+                </div>
+                <!-- chevron -->
+              </div>
+              <div class="cell-user-activity">
+                <img src="img/member-3.jpg" alt="Profile picture of a user">
+                <div>
+                  <p>Dawn Wood commented on Facebook's Changes for 2016</p>
+                  <p><span class="text-secondary">5 hours ago</span></p>
+                </div>
+                <!-- chevron -->
+              </div>
+              <div class="cell-user-activity">
+                <img src="img/member-4.jpg" alt="Profile picture of a user">
+                <div>
+                  <p>Dan Oliver posted YourApp's SEO Tips</p>
+                  <p><span class="text-secondary">1 day ago</span></p>
+                </div>
+                <!-- chevron -->
+              </div>
+            </div>
+          </div>
+          
+
+          <!-- message users container -->
+          <div class="widget-container" id="message-user">
+            <h3 class="widget-title">Message Users</h3>
+
+            <!-- message text inputs -->
+            <input type="text" name="search-user" id="search-user" placeholder="Search for user">
+            <textarea name="message-user" id="message-user" placeholder="Message for user" rows="6"></textarea>
+            
+            <!-- send button -->
+            <div class="button-container">
+              <button class="button-confirm">Send</button>
+            </div>
+          </div>
+          
+
+          <!-- settings container -->
+          <div class="widget-container" id="settings">
+            <h3 class="widget-title">Settings</h3>
+            
+            <!-- toggle buttons -->
+            <div class="form-toggle">
+              <p>Send email notifications</p>
+              <label class="switch switch-light switch-ios" onclick="">
+                <input type="checkbox">
+                <span>
+                  <span>OFF</span>
+                  <span>ON</span>
+                  <a></a>
+                </span>
+              </label>
+            </div>
+            
+            <div class="form-toggle">
+              <p>Set profile to public</p>
+              <label class="switch switch-light switch-ios" onclick="">
+                <input type="checkbox">
+                <span>
+                  <span>OFF</span>
+                  <span>ON</span>
+                  <a></a>
+                </span>
+              </label>
+            </div>
+
+            <!-- dropdown menu -->
+            <select>
+              <option value=''>Please choose a timezone</option>
+              <option>GMT+1</option>
+              <option>GMT+2</option>
+              <option>GMT+3</option>
+              <option>GMT+4</option>
+            </select>
+            
+            <!-- save and cancel buttons -->
+            <div class="button-container two-button">
+              <button class="button-confirm" type="button">Save</button>
+              <button class="button-cancel" type="button">Cancel</button>
+            </div>
+          </div>
+        </div> <!-- end of dashboard grid -->
+      
+      </main>
+    
+    </div> <!-- end of container div -->
+  </body>
+  
+  <!-- javascript resources -->
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+  <script src="js/script.js"></script>
+
+</html>

@@ -1,0 +1,38 @@
+.widget-container {
+  padding: 20px;
+  border: 1px solid lightgray;
+  display: flex;
+  flex-direction: column;
+}
+
+.widget-container:first-of-type {
+  border-top: none;
+}
+
+.chart-container {
+  padding: 20px;
+}
+
+#dashboard-header {
+  display: flex;
+  align-items: center;
+}
+
+#dashboard-header h2 {
+  margin: 20px 40px;
+}
+
+.header-search {
+  background: #f0f0f0;
+  border-left: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+.header-search input {
+  margin: 12px 24px 12px auto;
+  max-height: 44px;
+  width: 400px;
+}

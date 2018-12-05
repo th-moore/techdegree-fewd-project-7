@@ -1,0 +1,147 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: minmax(80px, auto);
+  grid-template-areas: 
+    "header" 
+    "nav" 
+    "dashboard";
+}
+
+header {
+  grid-area: header;
+  background-color: #7477BF;
+  display: flex;
+  align-items: center;
+}
+
+#user-profile {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+
+#user-profile p {
+  margin-right: 30px;
+}
+
+.notification-bell {
+  width: 30px;
+  margin: 0px 20px;
+}
+
+.profile-image {
+  border-radius: 50%;
+  width: 36px;
+  margin: 0px 20px;
+}
+
+#user-profile div {
+  border-right: 2px solid rgba(255,255,255,0.1);
+}
+
+nav {
+  grid-area: nav;
+  background-color: #4D4C72;
+  display: flex;
+  padding-left: 20px;
+}
+
+.nav-icon {
+  width: 30px;
+  margin: auto 24px;
+}
+
+.dashboard-grid {
+  grid-area: dashboard;
+  background-color: #ffffff;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: minmax(80px, auto);
+  grid-template-areas: 
+    "traffic-total" 
+    "traffic-daily" 
+    "mobile-users" 
+    "social-stats" 
+    "new-members"
+    "recent-activity"
+    "message-user"
+    "settings";
+}
+
+#dashboard-header {
+  grid-area: dashboard-header;
+}
+
+#notification-bar {
+  grid-area: notification-bar;
+}
+
+#traffic-total {
+  grid-area: traffic-total;
+}
+
+#traffic-daily {
+  grid-area: traffic-daily;
+}
+
+#mobile-users {
+  grid-area: mobile-users;
+}
+
+#social-stats {
+  grid-area: social-stats;
+}
+
+#new-members {
+  grid-area: new-members;
+}
+
+#recent-activity {
+  grid-area: recent-activity;
+}
+
+#message-user {
+  grid-area: message-user;
+}
+
+#settings {
+  grid-area: settings;
+}
+
+/* MEDIA QUERIES =================== */
+
+@media (min-width: 768px) {
+  .container {
+    grid-template-columns: 80px 1fr;
+    grid-template-rows: 80px minmax(80px, auto);
+    grid-template-areas: 
+      "header header" 
+      "nav dashboard";
+  }
+
+  nav {
+    flex-direction: column;
+    padding-top: 20px;
+    padding-left: 0px;
+  }
+
+  .nav-icon {
+    margin: 24px auto;
+  }
+
+}
+
+@media (min-width: 1024px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(80px, auto);
+    grid-template-areas:
+      "traffic-total traffic-total" 
+      "traffic-daily mobile-users" 
+      "social-stats social-stats" 
+      "new-members recent-activity"
+      "message-user settings";
+  }
+}

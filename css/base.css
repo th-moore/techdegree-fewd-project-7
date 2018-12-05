@@ -1,0 +1,15 @@
+/* ================================= */
+/* BASE STYLES ===================== */
+/* ================================= */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+button:hover {
+  cursor: pointer;
+}
