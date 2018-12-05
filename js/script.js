@@ -25,7 +25,8 @@ let lineChart = new Chart(lineCanvas, {
 
     // Configuration options go here
     options: {
-      // maintainAspectRatio: false,
+      responsive: true,
+      maintainAspectRatio: true,
       legend:{display:false},
       elements:{
         line:{tension:0}
@@ -64,6 +65,8 @@ let barChart = new Chart(barCanvas, {
 
     // Configuration options go here
     options: {
+      responsive: true,
+      maintainAspectRatio: true,
       legend:{display:false},
       elements:{
         point:{backgroundColor:'white'},
@@ -103,6 +106,8 @@ let doughnutChart = new Chart(doughnutCanvas, {
 
     // Configuration options go here
     options: {
+      responsive: true,
+      maintainAspectRatio: true,
       legend:{
         display: true,
         position: 'right',
