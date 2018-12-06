@@ -11,11 +11,23 @@
   border-bottom: none;
 }
 
-.cell-user-activity img {
+.cell-user-activity img:nth-of-type(1) {
   height: 40px;
   border-radius: 100%;
   margin-left: 4px;
   margin-right: 14px;
+}
+
+.cell-user-activity img:nth-of-type(2) {
+  height: 20px;
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  
+  .cell-user-actvivity img:nth-of-type(2) {
+    margin-right: 20px;
+  }
 }
 
 .cell-user-activity p {
@@ -31,13 +43,26 @@
 
 .cell-social-stats {
   width: 26%;
+  min-width: 240px;
+  min-height: 100px;
   background: #f8f8f8;
   border: 1px solid lightgray;
   border-radius: 4px;
   padding: 12px 8px;
   display: flex;
   align-items: center;
-  min-height: 100px;
+  margin-bottom: 40px;
+}
+
+.cell-social-stats:last-of-type {
+  margin-bottom: 0px;
+}
+
+@media (min-width: 1024px) {
+  
+  .cell-social-stats {
+    margin-bottom: 0px;
+  }
 }
 
 .social-icon-container {
@@ -75,9 +100,17 @@
 
 .social-stats-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-evenly;
+  align-items: center;
   padding: 40px 0px;
+}
+
+@media (min-width: 1024px) {
+  
+  .social-stats-container {
+    flex-direction: row;
+  }
 }
 
 /* notification bar */

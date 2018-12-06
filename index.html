@@ -21,7 +21,7 @@
 
     <!-- 2. VENDORS -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/css-toggle-switch@latest/dist/toggle-switch.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/css-toggle-switch@latest/dist/toggle-switch.css">
 
     <!-- 3. BASE -->
     <link rel="stylesheet" href="css/base.css">
@@ -149,13 +149,15 @@
 
           <!-- traffic total container -->
           <div class="widget-container" id="traffic-total">
-            <h3 class="widget-title">Total Traffic</h3>
-            <ul class="chart-controls">
-              <li>Hourly</li>
-              <li>Daily</li>
-              <li>Weekly</li>
-              <li>Monthly</li>
-            </ul>
+            <div class="widget-title-controls">
+              <h3 class="widget-title">Total Traffic</h3>
+              <ul class="chart-controls">
+                <li>Hourly</li>
+                <li>Daily</li>
+                <li>Weekly</li>
+                <li>Monthly</li>
+              </ul>
+            </div>
 
             <!-- line graph -->
             <div class="chart-container" style="position: relative">
@@ -304,7 +306,7 @@
                   <p>Victoria Chambers commented on YourApp's SEO Tips</p>
                   <p><span class="text-secondary">4 hours ago</span></p>
                 </div>
-                <!-- chevron -->
+                <img src="icons/icon-chevron.svg" alt="Chevron to access more information">
               </div>
               <div class="cell-user-activity">
                 <img src="img/member-2.jpg" alt="Profile picture of a user">
@@ -312,7 +314,7 @@
                   <p>Dale Byrd liked the post Facebook's Changes for 2016</p>
                   <p><span class="text-secondary">5 hours ago</span></p>
                 </div>
-                <!-- chevron -->
+                <img src="icons/icon-chevron.svg" alt="Chevron to access more information">
               </div>
               <div class="cell-user-activity">
                 <img src="img/member-3.jpg" alt="Profile picture of a user">
@@ -320,7 +322,7 @@
                   <p>Dawn Wood commented on Facebook's Changes for 2016</p>
                   <p><span class="text-secondary">5 hours ago</span></p>
                 </div>
-                <!-- chevron -->
+                <img src="icons/icon-chevron.svg" alt="Chevron to access more information">
               </div>
               <div class="cell-user-activity">
                 <img src="img/member-4.jpg" alt="Profile picture of a user">
@@ -328,7 +330,7 @@
                   <p>Dan Oliver posted YourApp's SEO Tips</p>
                   <p><span class="text-secondary">1 day ago</span></p>
                 </div>
-                <!-- chevron -->
+                <img src="icons/icon-chevron.svg" alt="Chevron to access more information">
               </div>
             </div>
           </div>
@@ -339,12 +341,12 @@
             <h3 class="widget-title">Message Users</h3>
 
             <!-- message text inputs -->
-            <input type="text" name="search-user" id="search-user" placeholder="Search for user">
-            <textarea name="message-user" id="message-user" placeholder="Message for user" rows="6"></textarea>
+            <input type="text" name="search-user" id="search-user-field" placeholder="Search for user">
+            <textarea name="message-user" id="message-user-field" placeholder="Message for user" rows="6"></textarea>
             
             <!-- send button -->
             <div class="button-container">
-              <button class="button-confirm">Send</button>
+              <button id="message-submit" class="button-confirm" type="submit">Send</button>
             </div>
           </div>
           

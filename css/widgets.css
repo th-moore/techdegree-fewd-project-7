@@ -9,8 +9,11 @@
   border-top: none;
 }
 
-.chart-container {
-  padding: 20px;
+@media (min-width: 768px) {
+  
+  .chart-container {
+    padding: 20px;
+  }
 }
 
 canvas {
@@ -20,11 +23,23 @@ canvas {
 
 #dashboard-header {
   display: flex;
+  flex-direction: column-reverse;
   align-items: center;
 }
 
 #dashboard-header h2 {
-  margin: 20px 40px;
+  margin: 20px auto;
+}
+
+@media (min-width: 768px) {
+  
+  #dashboard-header {
+    flex-direction: row;
+  }
+
+  #dashboard-header h2 {
+    margin: 20px 40px;
+  }
 }
 
 .header-search {
@@ -32,12 +47,14 @@ canvas {
   border-left: 1px solid lightgray;
   border-bottom: 1px solid lightgray;
   flex-grow: 1;
+  width: 100%;
   display: flex;
+  justify-content: flex-end;
   align-items: center;
 }
 
 .header-search input {
-  margin: 12px 24px 12px auto;
+  margin: 12px 24px 12px 24px;
   max-height: 44px;
-  width: 400px;
+  max-width: 400px;
 }

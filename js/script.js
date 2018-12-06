@@ -134,3 +134,31 @@ removeButton.addEventListener('click', (e) => {
   console.log('remove button has been clicked');
   alertBar.style.display = 'none';
 });
+
+//===============================================
+// MESSAGE SUBMIT
+//===============================================
+
+const userField = document.getElementById('search-user-field');
+const messageField = document.getElementById('message-user-field');
+const messageSubmit = document.getElementById('message-submit');
+
+messageSubmit.addEventListener('click', (e) => {
+  console.log('message send button has been clicked');
+  console.log(userField);
+  console.log(messageField);
+
+  if (userField.value == '' && messageField.value == '') {
+    console.log('userField and messageField is empty');
+    window.alert('Please enter a valid user and message');
+  } else if (userField.value == '') {
+    console.log('userField is empty');
+    window.alert('Please enter a valid username');
+  } else if (messageField.value == '') {
+    console.log('messageField is empty');
+    window.alert('Please enter a message to send');
+  } else {
+    console.log('message sent!')
+    window.alert('Success! Message sent to ' + userField.value);
+  }
+});
