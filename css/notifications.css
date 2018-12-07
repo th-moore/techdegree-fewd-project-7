@@ -4,9 +4,9 @@
 
 .alert-container {
   display: none;
-  position: absolute;
-  top: 65px;
-  right: 150px;
+  position: fixed;
+  top: 20%;
+  right: 15%;
   background: #f8f8f8;
   min-width: 400px;
   max-width: 420px;
