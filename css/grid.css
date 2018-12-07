@@ -45,12 +45,35 @@ nav {
   grid-area: nav;
   background-color: #4D4C72;
   display: flex;
-  padding-left: 20px;
+  justify-content: space-evenly;
 }
 
 .nav-icon {
+  margin: 0px 15px;
+  padding: 0px 26px;
+
+  border-left: none;
+  border-bottom: 3px solid #4D4C72;
+  opacity: .5;
+}
+
+.nav-icon:hover {
+  opacity: 1;
+  transition-duration: .8s;
+  cursor: pointer;
+}
+
+.nav-icon-selected {
+  border-left: none;
+  border-bottom: 3px solid #81C98F;
+  opacity: 1;
+}
+
+.nav-icon img {
+  display: inline-block;
+  height: 100%;
   width: 30px;
-  margin: auto 24px;
+  margin: auto;
 }
 
 .dashboard-grid {
@@ -123,14 +146,28 @@ nav {
 
   nav {
     flex-direction: column;
+    justify-content: flex-start;
     padding-top: 20px;
-    padding-left: 0px;
   }
 
   .nav-icon {
-    margin: 24px auto;
+    margin: 15px 0px;
+    padding: 20px 0px;
+
+    width: 100%;
+
+    border-left: 3px solid #4D4C72;
+    border-bottom: none;
   }
 
+  .nav-icon-selected {
+    border-left: 3px solid #81C98F;
+    border-bottom: none;
+  }
+
+  .nav-icon img {
+    display: block;
+  }
 }
 
 @media (min-width: 1024px) {

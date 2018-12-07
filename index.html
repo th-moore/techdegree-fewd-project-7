@@ -36,6 +36,7 @@
     <link rel="stylesheet" href="css/buttons.css">
     <link rel="stylesheet" href="css/forms.css">
     <link rel="stylesheet" href="css/cells.css">
+    <link rel="stylesheet" href="css/notifications.css">
     <!-- images -->
     
     <!-- 6. PAGES -->
@@ -55,9 +56,10 @@
           <h2>YourApp</h2>
         </div>
         
-        <!-- notification dropdown
-        <div>
-          <ul class="header-icon">  
+        <!-- notification dropdown -->
+        <div class="alert-container" id="alert-container">
+          <h3 class="alert-title">Notifications</h3>
+          <ul class="alert-list">  
             <li>
               <img src="img/member-1.jpg" alt="Profile photo of a user">
               <div>
@@ -88,11 +90,10 @@
             </li>
           </ul>
         </div>
-        -->
 
         <!-- user profile -->
         <div id="user-profile">
-          <div>
+          <div id="alert-bell">
           <!-- <img class="notification-bell" src="icons/icon-bell.svg" alt="Icon of a bell"> -->
           <svg class="notification-bell" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
           	 viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
@@ -110,17 +111,17 @@
       
       <!-- navigation bar container -->
       <nav>
-        <div class="nav-icon">
-          <a href="#"><img src="icons/icon-dashboard.svg" alt="Icon of a dashboard"></a>
+        <div class="nav-icon nav-icon-selected">
+          <img src="icons/icon-dashboard.svg" alt="Icon of a dashboard">
         </div>
         <div class="nav-icon">
-          <a href="#"><img src="icons/icon-visits.svg" alt="Icon of a visits"></a>
+          <img src="icons/icon-visits.svg" alt="Icon of a visits">
         </div>
         <div class="nav-icon">
-          <a href="#"><img src="icons/icon-members.svg" alt="Icon of a members"></a>
+          <img src="icons/icon-members.svg" alt="Icon of a members">
         </div>
         <div class="nav-icon">
-          <a href="#"><img src="icons/icon-settings.svg" alt="Icon of a settings"></a>
+          <img src="icons/icon-settings.svg" alt="Icon of a settings">
         </div>
       </nav>
 
@@ -151,11 +152,11 @@
           <div class="widget-container" id="traffic-total">
             <div class="widget-title-controls">
               <h3 class="widget-title">Total Traffic</h3>
-              <ul class="chart-controls">
-                <li>Hourly</li>
-                <li>Daily</li>
-                <li>Weekly</li>
-                <li>Monthly</li>
+              <ul class="chart-controls" id="chart-controls">
+                <li class="not-selected">Hourly</li>
+                <li class="not-selected">Daily</li>
+                <li class="selected">Weekly</li>
+                <li class="not-selected">Monthly</li>
               </ul>
             </div>
 
@@ -341,7 +342,9 @@
             <h3 class="widget-title">Message Users</h3>
 
             <!-- message text inputs -->
-            <input type="text" name="search-user" id="search-user-field" placeholder="Search for user">
+            <div class="autocomplete">
+              <input type="text" name="search-user" id="search-user-field" name="searchForUser" placeholder="Search for user">
+            </div>
             <textarea name="message-user" id="message-user-field" placeholder="Message for user" rows="6"></textarea>
             
             <!-- send button -->
@@ -354,12 +357,12 @@
           <!-- settings container -->
           <div class="widget-container" id="settings">
             <h3 class="widget-title">Settings</h3>
-            
+          
             <!-- toggle buttons -->
             <div class="form-toggle">
               <p>Send email notifications</p>
               <label class="switch switch-light switch-ios" onclick="">
-                <input type="checkbox">
+                <input type="checkbox" id="email-pref">
                 <span>
                   <span>OFF</span>
                   <span>ON</span>
@@ -371,7 +374,7 @@
             <div class="form-toggle">
               <p>Set profile to public</p>
               <label class="switch switch-light switch-ios" onclick="">
-                <input type="checkbox">
+                <input type="checkbox" id="profile-pref">
                 <span>
                   <span>OFF</span>
                   <span>ON</span>
@@ -381,7 +384,7 @@
             </div>
 
             <!-- dropdown menu -->
-            <select>
+            <select id="timezone-pref">
               <option value=''>Please choose a timezone</option>
               <option>GMT+1</option>
               <option>GMT+2</option>
@@ -391,9 +394,10 @@
             
             <!-- save and cancel buttons -->
             <div class="button-container two-button">
-              <button class="button-confirm" type="button">Save</button>
-              <button class="button-cancel" type="button">Cancel</button>
+              <button class="button-confirm" type="button" id="save-pref-button">Save</button>
+              <button class="button-cancel" type="button" id="cancel-pref-button">Cancel</button>
             </div>
+
           </div>
         </div> <!-- end of dashboard grid -->
       

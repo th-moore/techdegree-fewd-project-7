@@ -14,7 +14,7 @@ ___
 3. [**DONE**] Add a CSS transition to the bell icon when the user hovers over it.
 
 ### Exceeds Expectations
-1. Displays at least two notifications at the same time when the user clicks the alerts icon (this could be a pop-up window or dropdown menu).
+1. [**DONE**] Displays at least two notifications at the same time when the user clicks the alerts icon (this could be a pop-up window or dropdown menu).
 
 ___
 
@@ -26,9 +26,9 @@ ___
 2. [**DONE**] General spacing and arrangement of the elements matches the layout of the widgets in the mockup.
 
 ### Exceeds Expectations
-1. Traffic chart widget:
+1. [**DONE**] Traffic chart widget:
 * Includes navigation allowing user to switch between viewing an Hourly, Daily, and Weekly chart.
-2. Traffic chart widget:
+2. [**DONE**] Traffic chart widget:
 * Hourly, Daily, Weekly and Monthly buttons display a different line chart on click.
 
 ___
@@ -69,4 +69,4 @@ ___
 * [**DONE**] Save and Cancel buttons (these do not have to do anything functional).
 
 ### Exceeds Expectations
-1. Local storage is used to save the settings. When page is reloaded the settings are remembered.
+1. [**DONE**] Local storage is used to save the settings. When page is reloaded the settings are remembered.

@@ -19,3 +19,9 @@
 .text-secondary {
   font-size: 0.9em;
 }
+
+.caption {
+  font-size: 0.8em;
+  font-style: italic;
+  color: gray;
+}
