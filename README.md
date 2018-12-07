@@ -57,7 +57,7 @@ ___
 2. [**DONE**] General spacing and arrangement of the elements matches the layout of the widget in the mockup.
 
 ### Exceeds Expectations
-1. Displays working autocomplete search input field that lets the user search for members.
+1. [**DONE**] Displays working autocomplete search input field that lets the user search for members.
 
 ___
 
