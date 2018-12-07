@@ -328,22 +328,25 @@ removeButton.addEventListener('click', (e) => {
 // LOCAL STORAGE
 //===============================================
 
-let emailPref = document.getElementById('email-pref');
-let profilePref = document.getElementById('profile-pref');
-let timezonePref = document.getElementById('timezone-pref');
+const emailToggle = document.getElementById('email-pref');
+const profileToggle = document.getElementById('profile-pref');
+const timezoneSelect = document.getElementById('timezone-pref');
 
 
 // INITIALISATION ===============================
 
-if (localStorage.emailPref === undefined || localStorage.emailPref === undefined) {
-  localStorage.emailPref = 'true';
-  localStorage.profilePref = 'false';
+if (localStorage.getItem('emailPref') === 'true') {
+  emailToggle.checked = true;
 }
 
-if (localStorage.timezonePref === null) {
-  timezonePref.value = "Please choose a timezone";
+if (localStorage.getItem('profilePref') === 'true') {
+  profileToggle.checked = true;
+}
+
+if (localStorage.timezonePref === null || localStorage.timezonePref === undefined) {
+  timezoneSelect.value = 'default';
 } else {
-  timezonePref.value = localStorage.timezonePref;
+  timezoneSelect.value = localStorage.timezonePref;
 }
 
 
@@ -353,13 +356,13 @@ const savePrefButton = document.getElementById('save-pref-button');
 const cancelPrefButton = document.getElementById('cancel-pref-button');
 
 savePrefButton.addEventListener('click', ()=>{
-  localStorage.setItem('emailPref', emailPref.checked);
-  localStorage.setItem('profilePref', profilePref.checked);
-  localStorage.setItem('timezonePref', timezonePref.value);
+  localStorage.setItem('emailPref', emailToggle.checked);
+  localStorage.setItem('profilePref', profileToggle.checked);
+  localStorage.setItem('timezonePref', timezoneSelect.value);
 });
 
 cancelPrefButton.addEventListener('click', () => {
-	localStorage.clear();
+  localStorage.clear();
 });
 
 
