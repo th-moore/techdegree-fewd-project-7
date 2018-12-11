@@ -375,7 +375,9 @@ const notificationContainer = document.getElementById('alert-container');
 notificationContainer.style.display = 'none';
 
 notificationBell.addEventListener('click', (e) => {
-  
+  let notificationDot = notificationBell.lastElementChild;
+  notificationDot.style.display = 'none';
+
   if (notificationContainer.style.display === 'none') {
     notificationContainer.style.display = 'block';
   } else {
